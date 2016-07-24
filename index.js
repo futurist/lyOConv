@@ -20,6 +20,7 @@ function checkFile (filename) {
   var file = getFile(filename)
   var store = fileStore[filename]
   fs.stat(file, function (err, stats) {
+    if(err) return
     if (store.stats.size == stats.size) {
       convertFile(file)
     } else {
@@ -52,6 +53,8 @@ function convertFile (file) {
     console.log('File', file, 'has been added')
     spawn('cscript', ['oconv.vbs', file, path.join(folder, 'ok')])
   } else {
-    fs.unlink(file)
+    fs.unlink(file, function(err) {
+      if(err) return
+    })
   }
 }
