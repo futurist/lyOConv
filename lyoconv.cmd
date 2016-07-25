@@ -5,5 +5,4 @@ title lyoconv
 
 
 set DEBUG=*
-supervisor -i . index.js > app_out.log
-
+supervisor -i . index.js

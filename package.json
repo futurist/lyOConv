@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/futurist/lyOConv#readme",
   "dependencies": {
-    "chokidar": "^1.6.0"
+    "iconv-lite": "^0.4.13"
   }
 }
