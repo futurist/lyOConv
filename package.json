@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/futurist/lyOConv#readme",
   "dependencies": {
-    "iconv-lite": "^0.4.13"
+    "iconv-lite": "^0.4.13",
+    "mkdirp": "^0.5.1"
   }
 }

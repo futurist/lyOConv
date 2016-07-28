@@ -2,6 +2,7 @@ var path = require('path')
 var fs = require('fs')
 var iconv = require('iconv-lite')
 var spawn = require('child_process').spawn
+var mkdirp=require("mkdirp")
 
 var folder = 'D:\\Test'
 
@@ -10,6 +11,7 @@ try {
   folder = pathJoin(CONFIG.officeFolder, '')
 } catch(e) {}
 
+mkdirp(folder)
 console.log(111, folder)
 
 var fileStore = {}
